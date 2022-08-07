@@ -15,3 +15,4 @@
 
 * [if & guard](swift/if-and-guard.md)
 * [optional & non-optional](swift/optional-and-non-optional.md)
+* [array & dictionary & set](swift/array-and-dictionary-and-set.md)
