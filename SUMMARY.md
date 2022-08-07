@@ -17,3 +17,4 @@
 * [optional & non-optional](swift/optional-and-non-optional.md)
 * [array & dictionary & set](swift/array-and-dictionary-and-set.md)
 * [tuples](swift/tuples.md)
+* [class & access modifiers](swift/class-and-access-modifiers.md)
