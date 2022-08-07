@@ -10,3 +10,7 @@
 
 * [promise](javascript/promise.md)
 * [async/await](javascript/async-await.md)
+
+## swift
+
+* [if & guard](swift/if-and-guard.md)
