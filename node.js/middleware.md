@@ -1,7 +1,3 @@
----
-description: Middleware nedir ve node.js içerisinde nasıl kullanılır?
----
-
 # Middleware
 
 Middleware (ara katman) sistem ile uygulama arasında bulunana katmandır diyebiliriz. Bu katmanı anlamak için öncelikle bir örnek oluşturalım.
