@@ -6,6 +6,8 @@
 
 Şuanda aktif olarak backend teknolojilerini kullandığımdan dolayı içeriğin büyük bir çoğunluğu bu teknolojiler üzerine olacaktır. Fakat bireysel olarak öğrenmek istediğim farklı alanlardaki teknolojiler hakkında da yazılar paylaşacağım.
 
-İçerikleri oluştururken kullandığım kaynakları [References ](https://github.com/bahri-hirfanoglu/docs.bahrihrf.dev/tree/main/references)kısmında paylaşmaya özen göstereceğim.&#x20;
+İçerikleri oluştururken kullandığım kaynakları [References ](https://github.com/bahri-hirfanoglu/docs.bahrihrf.dev/tree/main/references)kısmında paylaşmaya özen göstereceğim.
+
+[SUMMARY.md](SUMMARY.md)
 
 ###
