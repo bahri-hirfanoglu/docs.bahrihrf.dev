@@ -21,3 +21,4 @@
 * [struct & mutating func](swift/struct-and-mutating-func.md)
 * [protocol](swift/protocol.md)
 * [enum](swift/enum.md)
+* [subscript](swift/subscript.md)
