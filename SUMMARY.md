@@ -20,3 +20,4 @@
 * [class & access modifiers](swift/class-and-access-modifiers.md)
 * [struct & mutating func](swift/struct-and-mutating-func.md)
 * [protocol](swift/protocol.md)
+* [enum](swift/enum.md)
