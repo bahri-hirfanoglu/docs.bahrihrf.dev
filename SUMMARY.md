@@ -9,3 +9,4 @@
 ## javascript
 
 * [promise](javascript/promise.md)
+* [async/await](javascript/async-await.md)
