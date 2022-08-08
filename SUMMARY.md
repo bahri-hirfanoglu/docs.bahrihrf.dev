@@ -5,6 +5,7 @@
 ## nodejs
 
 * [middleware](nodejs/middleware.md)
+* [executable](nodejs/executable.md)
 
 ## javascript
 
