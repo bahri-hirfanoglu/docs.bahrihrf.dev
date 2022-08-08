@@ -83,6 +83,10 @@ app.get('/assets/*', function(req, res) {
 
 **3)** Eğer nexe ile build alırken herhangi bir hata ile karşılaşıyorsanız aşağıdaki kod satırını çalıştırarak build alırken karşılaşılan hataları detaylı şekilde görebilirsiniz.&#x20;
 
+![build hatası](../.gitbook/assets/error.jpg)
+
+![--verbose ile detaylı hata inceleme](../.gitbook/assets/verbose.jpg)
+
 ```
 nexe app.js --build --verbose -t windows
 ```
