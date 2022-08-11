@@ -12,6 +12,10 @@
 * [promise](javascript/promise.md)
 * [async/await](javascript/async-await.md)
 
+## Design Patterns
+
+* [Singleton Pattern](design-patterns/singleton-pattern.md)
+
 ## swift
 
 * [if & guard](swift/if-and-guard.md)
