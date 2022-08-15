@@ -69,12 +69,12 @@ if (cluster.isMaster) {
 
 ```
 
-`cluster.isMaster` ile ana işlem olup olmadığı kontrolünü gerçekleştiriyoruz. Eğer ana işlem üzerindeysek çekirdek sayımız kadar `cluster.fork()` işlemi gerçekleştiriyoruz. Bu işlem her bir çekirdeğimiz için aynı bağlantı noktasını dinleyen bir express sunucusu ayağa kaldırıyor. Bu sunucuların hepsi master process bağlı olaran child processler olarak oluşturuluyor. Uygulamamızı çalıştırdığımızda console çıktısı aşağıdaki gibi olacaktır. \
+`cluster.isMaster` ile ana işlem olup olmadığı kontrolünü gerçekleştiriyoruz. Eğer ana işlem üzerindeysek çekirdek sayımız kadar `cluster.fork()` işlemi gerçekleştiriyoruz. Bu işlem her bir çekirdeğimiz için aynı bağlantı noktasını dinleyen bir express sunucusu ayağa kaldırıyor. Bu sunucuların hepsi master process bağlı child process olarak oluşturuluyor. Uygulamamızı çalıştırdığımızda console çıktısı aşağıdaki gibi olacaktır. \
 _**NOT**_: **cluster.on** ile worker exit eventini dinleyebiliriz. Bu şekilde bir iş parçacığının sonlanma durumuna karşın boşta kalan iş parçacığı için yeni bir server ayağa kaldırabiliriz.
 
 ![output](../.gitbook/assets/cluster-module-output.jpg)
 
-İş parçacıklarının performansa etkisini görebilmek adına drop.json içerisinde 1.2M satırlık bir veri dizisi oluşturduk. Önce tek çekirdekte çalışan express sunucumuzun için bir test yapalım. Test için **loadtest** paketini kullanacağız.
+İş parçacıklarının performansa etkisini görebilmek adına drop.json içerisinde 1.2M satırlık bir veri dizisi oluşturduk. Önce tek çekirdekte çalışan express sunucumuz için bir test yapalım. Test için **loadtest** paketini kullanacağız.
 
 ```bash
 npm install -g loadtest
