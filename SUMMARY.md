@@ -6,6 +6,7 @@
 
 * [middleware](nodejs/middleware.md)
 * [executable](nodejs/executable.md)
+* [cluster module](nodejs/cluster-module.md)
 
 ## javascript
 
