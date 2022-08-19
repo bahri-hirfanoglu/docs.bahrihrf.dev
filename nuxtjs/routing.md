@@ -8,7 +8,7 @@ nuxt uygulaması oluşturmak için terminalimizi açıp aşağıdaki komutu çal
 yarn create nuxt-app <project-name>
 ```
 
-Kurulum işlemi sırasında çeşitli sorular ile karşılaşabiliriz bu kısımları kendinize uygun olarak doldurup kurulumu tamamlayabilirsiniz. Kurulum proje yapımız aşağıdaki gibi olacaktır.
+Kurulum işlemi sırasında çeşitli sorular ile karşılaşabiliriz bu kısımları kendinize uygun olarak doldurup kurulumu tamamlayabilirsiniz. Kurulum sonrası proje yapımız aşağıdaki gibi olacaktır.
 
 ![](../.gitbook/assets/nuxt-routing-tree.jpg)
 
@@ -22,11 +22,11 @@ Aynı şekilde farklı bir isimde component oluşturursak otomatik olarak route 
 
 ### Klasör adı ile route işlemi
 
-Tabii ki tüm componentleri bu şekilde pages klasörü içerisine yazmak proje ilerledikçe içinden çıkılmaz bir hal olacaktır. Bu yüzden klasörler ilede route işlemi yapabiliyoruz. pages dizinimiz içerisine <mark style="color:yellow;">**contact**</mark> adında bir klasör oluşturup onun içerisine <mark style="background-color:green;">**index.vue**</mark> componentini oluşturarak http://localhost/contact route'nu karşılayabiliriz. Bu klasörleme işlemini dallandırabiliriz. Örneğin contact klasörü içerisine direkt <mark style="background-color:green;">**detail.vue**</mark> veya <mark style="color:yellow;">**detail**</mark> klasörü oluşturup içerisine <mark style="background-color:green;">**index.vue**</mark> componenti oluşturarak http://localhost/contact/detail adresine gelen istekleri karşılayabiliriz.&#x20;
+Tabii ki tüm componentleri bu şekilde pages klasörü içerisine yazmak proje ilerledikçe içinden çıkılmaz bir hal alacaktır. Bu yüzden klasörler ile de route işlemi yapabiliyoruz. pages dizinimiz içerisine <mark style="color:yellow;">**contact**</mark> adında bir klasör oluşturup onun içerisine <mark style="background-color:green;">**index.vue**</mark> componentini oluşturarak http://localhost/contact route'nu karşılayabiliriz. Bu klasörleme işlemini dallandırabiliriz. Örneğin contact klasörü içerisine direkt <mark style="background-color:green;">**detail.vue**</mark> veya <mark style="color:yellow;">**detail**</mark> klasörü oluşturup içerisine <mark style="background-color:green;">**index.vue**</mark> componenti oluşturarak http://localhost/contact/detail adresine gelen istekleri karşılayabiliriz.&#x20;
 
 ### Route üzerinden parametre alma
 
-Vue ile route işleminde parametre almak için route oluştururken : ile alacağımız parametrenin adını belirtmemiz gerekiyordu. Nuxt.js bu durumu da pages klasörü içerisinde halletmemiz sağlıyor. Öncelikle blog adında bir klasör oluşturup içerine index.vue componentini tanımlayalım.&#x20;
+Vue ile route işleminde parametre almak için route oluştururken : ile alacağımız parametrenin adını belirtmemiz gerekiyordu. Nuxt.js bu durumu da pages klasörü içerisinde halletmemizi sağlıyor. Öncelikle blog adında bir klasör oluşturup içerine index.vue componentini tanımlayalım.&#x20;
 
 ```html
 <template>
@@ -40,9 +40,9 @@ export default {};
 <style></style>
 ```
 
-Bu component http://localhost:3000/blog adresine girdiğimizde render olacaktır. Şimdi blog/blog-adi şeklinde dinamik olan blog detay sayfamızı oluşturalım. Bunun için yapmamız gereken blog klasörümüz içerisinde \_name adında bir klasör oluşturup içerisine <mark style="background-color:green;">**index.vue**</mark> tanımlamak. Bu işlemden sonra <mark style="color:blue;">**blog/ilber-ortaylı**</mark> bu şekilde göndereceğimiz tüm istekler bu componente düşecektir. Peki /'den sonraki name parametresini nasıl alacağız? Daha önceden vue kullananların bileceği üzere $route.params.name şeklinde değerimizi alabiliriz.&#x20;
+Bu component http://localhost:3000/blog adresine girdiğimizde render olacaktır. Şimdi blog/blog-adi şeklinde dinamik olan blog detay sayfamızı oluşturalım. Bunun için yapmamız gereken blog klasörümüz içerisinde \_name adında bir klasör oluşturup içerisine <mark style="background-color:green;">**index.vue**</mark> tanımlamak. Bu işlemden sonra <mark style="color:blue;">**blog/ilber-ortaylı**</mark> şeklinde göndereceğimiz tüm istekler bu componente düşecektir. Peki /'den sonraki name parametresini nasıl alacağız? Daha önceden vue kullananların bileceği üzere _**$route.params.name**_ şeklinde değerimizi alabiliriz.&#x20;
 
-Peki bu değeri validate etmek ister? Nuxt.js bu durumu düşünerek componentimiz içerisinde bulunan script taglarımız arasına tanımlayabileceğimiz nuxt.js özel <mark style="color:purple;">**validate()**</mark> fonksiyonu mevcut. Bu fonksiyonu kullanarak gelen parametremizi validate işlemlerinden geçirip eğer beklediğimiz bir veri değilse return <mark style="color:red;">false</mark> yaparak sayfanın yüklenmemesini sağlayabiliriz. return <mark style="color:green;">true</mark> yaptığımzda ise sayfamız başarıyla render edilecektir.&#x20;
+Peki bu değeri validate etmek istersek? Nuxt.js bu durumu düşünerek componentimiz içerisinde bulunan script taglarımız arasına tanımlayabileceğimiz nuxt.js'e özel <mark style="color:purple;">**validate()**</mark> fonksiyonunu bizlere sunmuş. Bu fonksiyonu kullanarak gelen parametremizi validate işlemlerinden geçirip eğer beklediğimiz bir veri değilse return <mark style="color:red;">false</mark> yaparak sayfanın yüklenmesini engelleyebiliriz veya return <mark style="color:green;">true</mark> sayfamızı başarılı bir şekilde render edebiliriz.&#x20;
 
 Aşağıda \_name klasörümüz içerisinde bulunan index.vue componenti içerisinde uyguladığım bir validate işlemi mevcut. Bu işlem name parametremin numeric bir değer olup olmadığını kontrol ediyor eğer numeric değilse true numeric ise false döndürerek validate işlemini sonlandırıyor.&#x20;
 
@@ -68,6 +68,5 @@ export default {
 
 false dönmesi durumunda default nuxt.js <mark style="color:red;">**404**</mark> sayfası render oluyor. Bu sayfayı özelleştirmek için layouts klasörü içerisine <mark style="background-color:green;">**error.vue**</mark> componentini oluştabilirsiniz. Bundan sonra hata durumlarında bu sayfa render olacaktır.&#x20;
 
-{% hint style="info" %}
-NOT: Eğer layouts klasörü projenizde yok ise proje ana dizinine oluşturmanız yeterli olacaktır.
-{% endhint %}
+**NOT:** Eğer layouts klasörü projenizde yok ise proje ana dizinine oluşturmanız yeterli olacaktır.\
+**NOT:** Tüm route işlemleri nuxt.js özel olmakla beraber vue'nun kendi routing yapısı da kullanılabilir. Nuxt.js routing sistemi basit veya orta düzey projelerde kolaylıklar sağlamaktadır. Büyük ölçekli projelerde tercih edilmeyebilir.&#x20;
