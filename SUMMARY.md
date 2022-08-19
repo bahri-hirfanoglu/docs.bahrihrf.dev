@@ -17,6 +17,10 @@
 
 * [Singleton Pattern](design-patterns/singleton-pattern.md)
 
+## nuxtjs
+
+* [routing](nuxtjs/routing.md)
+
 ## swift
 
 * [if & guard](swift/if-and-guard.md)
