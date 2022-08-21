@@ -20,6 +20,7 @@
 ## nuxtjs
 
 * [routing](nuxtjs/routing.md)
+* [nuxt-child](nuxtjs/nuxt-child.md)
 
 ## swift
 
