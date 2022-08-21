@@ -18,7 +18,7 @@ Daha sonra pages klasörümüz içerisine blog adında bir klasör oluşturup in
 
 blog/index.vue componentimiz içerisini bootstrap 4'ün örnek blog sayfalarından birini kopyalayarak oluşturalım.
 
-<pre class="language-html" data-title="blog/index.vue" data-line-numbers><code class="lang-html">&#x3C;template>
+<pre class="language-html"><code class="lang-html">&#x3C;template>
 &#x3C;div>
      &#x3C;header>
       &#x3C;div class="collapse bg-dark" id="navbarHeader">
