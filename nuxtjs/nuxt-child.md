@@ -18,116 +18,118 @@ Daha sonra pages klasörümüz içerisine blog adında bir klasör oluşturup in
 
 blog/index.vue componentimiz içerisini bootstrap 4'ün örnek blog sayfalarından birini kopyalayarak oluşturalım.
 
-<pre class="language-html"><code class="lang-html">&#x3C;template>
-&#x3C;div>
-     &#x3C;header>
-      &#x3C;div class="collapse bg-dark" id="navbarHeader">
-        &#x3C;div class="container">
-          &#x3C;div class="row">
-            &#x3C;div class="col-sm-8 col-md-7 py-4">
-              &#x3C;h4 class="text-white">About&#x3C;/h4>
-              &#x3C;p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.&#x3C;/p>
-            &#x3C;/div>
-            &#x3C;div class="col-sm-4 offset-md-1 py-4">
-              &#x3C;h4 class="text-white">Contact&#x3C;/h4>
-              &#x3C;ul class="list-unstyled">
-                &#x3C;li>&#x3C;a href="#" class="text-white">Follow on Twitter&#x3C;/a>&#x3C;/li>
-                &#x3C;li>&#x3C;a href="#" class="text-white">Like on Facebook&#x3C;/a>&#x3C;/li>
-                &#x3C;li>&#x3C;a href="#" class="text-white">Email me&#x3C;/a>&#x3C;/li>
-              &#x3C;/ul>
-            &#x3C;/div>
-          &#x3C;/div>
-        &#x3C;/div>
-      &#x3C;/div>
-      &#x3C;div class="navbar navbar-dark bg-dark box-shadow">
-        &#x3C;div class="container d-flex justify-content-between">
-          &#x3C;a href="#" class="navbar-brand d-flex align-items-center">
-            &#x3C;svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">&#x3C;path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">&#x3C;/path>&#x3C;circle cx="12" cy="13" r="4">&#x3C;/circle>&#x3C;/svg>
-            &#x3C;strong>My Blog&#x3C;/strong>
-          &#x3C;/a>
-          &#x3C;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            &#x3C;span class="navbar-toggler-icon">&#x3C;/span>
-          &#x3C;/button>
-        &#x3C;/div>
-      &#x3C;/div>
-    &#x3C;/header>
+```html
+<template>
+<div>
+     <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>My Blog</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
     
-<strong>      &#x3C;main role="main">
-</strong>      &#x3C;div class="album py-5 bg-light">
-        &#x3C;div class="container">
-          &#x3C;div class="row">
-            &#x3C;div class="col-md-4">
-              &#x3C;div class="card mb-4 box-shadow">
-                &#x3C;img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
-                &#x3C;div class="card-body">
-                  &#x3C;p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&#x3C;/p>
-                  &#x3C;div class="d-flex justify-content-between align-items-center">
-                    &#x3C;div class="btn-group">
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">View&#x3C;/button>
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">Edit&#x3C;/button>
-                    &#x3C;/div>
-                    &#x3C;small class="text-muted">9 mins&#x3C;/small>
-                  &#x3C;/div>
-                &#x3C;/div>
-              &#x3C;/div>
-            &#x3C;/div>
-            &#x3C;div class="col-md-4">
-              &#x3C;div class="card mb-4 box-shadow">
-                &#x3C;img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
-                &#x3C;div class="card-body">
-                  &#x3C;p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&#x3C;/p>
-                  &#x3C;div class="d-flex justify-content-between align-items-center">
-                    &#x3C;div class="btn-group">
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">View&#x3C;/button>
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">Edit&#x3C;/button>
-                    &#x3C;/div>
-                    &#x3C;small class="text-muted">9 mins&#x3C;/small>
-                  &#x3C;/div>
-                &#x3C;/div>
-              &#x3C;/div>
-            &#x3C;/div>
-            &#x3C;div class="col-md-4">
-              &#x3C;div class="card mb-4 box-shadow">
-                &#x3C;img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
-                &#x3C;div class="card-body">
-                  &#x3C;p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&#x3C;/p>
-                  &#x3C;div class="d-flex justify-content-between align-items-center">
-                    &#x3C;div class="btn-group">
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">View&#x3C;/button>
-                      &#x3C;button type="button" class="btn btn-sm btn-outline-secondary">Edit&#x3C;/button>
-                    &#x3C;/div>
-                    &#x3C;small class="text-muted">9 mins&#x3C;/small>
-                  &#x3C;/div>
-                &#x3C;/div>
-              &#x3C;/div>
-            &#x3C;/div>
-          &#x3C;/div>
-        &#x3C;/div>
-      &#x3C;/div>
-    &#x3C;/main>
+      <main role="main">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://i.ibb.co/s5hd4pt/placeholder-image.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     
-    &#x3C;footer class="text-muted">
-      &#x3C;div class="container">
-        &#x3C;p class="float-right">
-          &#x3C;a href="#">Back to top&#x3C;/a>
-        &#x3C;/p>
-        &#x3C;p>Album example is &#x26;copy; Bootstrap, but please download and customize it for yourself!&#x3C;/p>
-        &#x3C;p>New to Bootstrap? &#x3C;a href="../../">Visit the homepage&#x3C;/a> or read our &#x3C;a href="../../getting-started/">getting started guide&#x3C;/a>.&#x3C;/p>
-      &#x3C;/div>
-    &#x3C;/footer>
-&#x3C;/div>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+</div>
 
-&#x3C;/template>
+</template>
 
-&#x3C;script>
+<script>
 export default {
 
 }
-&#x3C;/script>
+</script>
 
-&#x3C;style>
+<style>
 
-&#x3C;/style></code></pre>
+</style>
+```
 
 ![/blog sayfamızın görüntüsü](../.gitbook/assets/nuxt-child-blog.jpg)
 
