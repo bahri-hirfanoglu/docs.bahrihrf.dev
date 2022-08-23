@@ -19,6 +19,7 @@
 * [proxy pattern](design-patterns/proxy-pattern.md)
 * [provider pattern](design-patterns/provider-pattern.md)
 * [prototype pattern](design-patterns/prototype-pattern.md)
+* [container/presentational pattern](design-patterns/container-presentational-pattern.md)
 
 ## nuxtjs
 
