@@ -15,7 +15,8 @@
 
 ## Design Patterns
 
-* [Singleton Pattern](design-patterns/singleton-pattern.md)
+* [singleton pattern](design-patterns/singleton-pattern.md)
+* [proxy pattern](design-patterns/proxy-pattern.md)
 
 ## nuxtjs
 
