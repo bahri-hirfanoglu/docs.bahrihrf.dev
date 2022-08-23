@@ -17,6 +17,7 @@
 
 * [singleton pattern](design-patterns/singleton-pattern.md)
 * [proxy pattern](design-patterns/proxy-pattern.md)
+* [provider pattern](design-patterns/provider-pattern.md)
 
 ## nuxtjs
 
