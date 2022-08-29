@@ -29,7 +29,7 @@ Console.WriteLine(conf.AppName);
 
 Yukarıda bulunan yapımızda <mark style="color:orange;">**Config**</mark> adında bir sınıf oluşturduk ve içerisine private olarak <mark style="color:green;">**\_appName**</mark> değişkenini tanımladık. Daha sonra bu <mark style="color:green;">**\_appName**</mark> değişkenimize dışarıdan erişim sağlayabilmek adına public şekilde bir **AppName** property'si oluşturduk. Bu property proxy modelindeki proxy nesnesini temsil etmektedir.&#x20;
 
-Sınıfımızın en alt kısmında bir config sınıfımızın bir nesnesini oluşturarak **AppName** property'mizi çağırdık. Bu property bize <mark style="color:green;">**\_appName**</mark> değişkenimize erişim sağlamak için bir aracı görevi görmektedir. En alt kısımda ise yine **AppName** property'sini kullanarak değişkenimizin değerini güncelledik. Bu kısma kadar normal bir değişkene yaptığımız işlemlerden farklı bir şey yapmadık. Fakat biz <mark style="color:green;">**\_appName**</mark> değişkenimize erişilmeye çalışırken veyahut değer güncellenmeye çalışırken farklı bir aksiyon almak isteseydik. İşte burada proxy modelinin mantığını kullanacağız.
+Sınıfımızın en alt kısmında config sınıfımızın bir nesnesini oluşturarak **AppName** property'mizi çağırdık. Bu property bize <mark style="color:green;">**\_appName**</mark> değişkenimize erişim sağlamak için bir aracı görevi görmektedir. En alt kısımda ise yine **AppName** property'sini kullanarak değişkenimizin değerini güncelledik. Bu kısma kadar normal bir değişkene yaptığımız işlemlerden farklı bir şey yapmadık. Fakat biz <mark style="color:green;">**\_appName**</mark> değişkenimize erişilmeye çalışırken veyahut değer güncellenmeye çalışırken farklı bir aksiyon almak isteseydik. İşte burada proxy modelinin mantığını kullanacağız.
 
 Örneğin <mark style="color:green;">**\_appName**</mark> değişkenimize bir karakter sınırı koyalım. Belli bir karakter sınırı altında veri girişi olduğunda hata döndürelim.&#x20;
 
@@ -57,7 +57,7 @@ Console.WriteLine(conf.AppName);
 conf.AppName = "Prox";
 ```
 
-Kodumuzu yukarıdaki gibi güncellediğimizde artık <mark style="color:green;">**\_appName**</mark> değişkenimizin alabileceği minimum karakter sınırını 5 olarak belirlemiş olduk. **set** işlemi gerçekleşmeden hemen önce gelen değerimizin karakter sayısını kontrol ederek eğer 5'den küçük ise <mark style="color:red;">**throw**</mark> ile hata mesajımızı gönderdik. Derleyicimiz **conf.AppName = "Prox"** kodumuzu çalıştırmayı denediğinde throw ile gönderdiğimiz hata ile karşılaşmış olacağız. Bu şekilde değişkenimizin getter ve setter işlemlerinden önce çeşitli aksiyonlar alabilir veya get ve set işlemlerinden herhangi birini kullanmak istemiyorsa bu bloğu kaldırarak değişkenimize sınırlama getirebiliriz.
+Kodumuzu yukarıdaki gibi güncellediğimizde artık <mark style="color:green;">**\_appName**</mark> değişkenimizin alabileceği minimum karakter sayısını 5 olarak belirlemiş olduk. **set** işlemi gerçekleşmeden hemen önce gelen değerimizin karakter sayısını kontrol ederek eğer 5'den küçük ise <mark style="color:red;">**throw**</mark> ile hata mesajımızı gönderdik. Derleyicimiz **conf.AppName = "Prox"** kodumuzu çalıştırmayı denediğinde throw ile gönderdiğimiz hata ile karşılaşmış olacağız. Bu şekilde değişkenimizin getter ve setter işlemlerinden önce çeşitli aksiyonlar alabilir veya get ve set işlemlerinden herhangi birini kullanmak istemiyorsak bu bloğu kaldırarak değişkenimize sınırlama getirebiliriz.
 
 Proxy modelini yukarıda bir sınıf içerisinde bulunan property ile örneklendirdik daha detaylı bir örnek ile yazıyı sonlandıralım.&#x20;
 
@@ -156,7 +156,7 @@ Proxy modelini yukarıda bir sınıf içerisinde bulunan property ile örneklend
     player.loginPlayer(playerInfo);
 ```
 
-Bu örnekte **GamePlayer** sınıfımız üzerinde işlem yapmak için **ProxyPlayer** sınıfını oluşturduk. loginPlayer metodunu **ProxyPlayer** sınıfından bir nesne oluşturarak çağırdık ve kişinin kullanıcı adının veritabanı listemizde mevcut olup olmadığını kontrol ettik. Bu şekilde direkt olarak **GamePlayer** sınıfımız üzerinde bir işlem yapmadan verimizi kontrolden geçirmiş olduk.
+Bu örnekte **GamePlayer** sınıfımız üzerinde işlem yapmak için **ProxyPlayer** sınıfını oluşturduk. loginPlayer metodunu **ProxyPlayer** sınıfından bir nesne oluşturarak çağırdık ve kişinin kullanıcı adının veritabanı listemizde mevcut olup olmadığını kontrol ettik. Bu şekilde direkt olarak **GamePlayer** sınıfımız üzerinde bir işlem yapmadan verimizi kontrolden geçirmiş olduk ve bizim şartlarımız sağlandığı taktirde ana nesnemiz olan GamePlayer üzerinde işlem yapılmasına izin verdik.
 
 <figure><img src="../.gitbook/assets/proxy-board.jpg" alt=""><figcaption></figcaption></figure>
 
