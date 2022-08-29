@@ -156,7 +156,7 @@ Proxy modelini yukarıda bir sınıf içerisinde bulunan property ile örneklend
     player.loginPlayer(playerInfo);
 ```
 
-Bu örnekte **GamePlayer** sınıfımız üzerinde işlem yapmak için **ProxyPlayer** sınıfını oluşturduk. loginPlayer metodunu **ProxyPlayer** sınıfından bir örnek olarak çağırdık ve kişinin kullanıcı adının veritabanı listemizde mevcut olup olmadığını kontrol ettik. Bu şekilde direkt olarak **GamePlayer** sınıfımız üzerinde bir işlem yapmandan verimizi kontrolden geçirmiş olduk.
+Bu örnekte **GamePlayer** sınıfımız üzerinde işlem yapmak için **ProxyPlayer** sınıfını oluşturduk. loginPlayer metodunu **ProxyPlayer** sınıfından bir nesne oluşturarak çağırdık ve kişinin kullanıcı adının veritabanı listemizde mevcut olup olmadığını kontrol ettik. Bu şekilde direkt olarak **GamePlayer** sınıfımız üzerinde bir işlem yapmadan verimizi kontrolden geçirmiş olduk.
 
 <figure><img src="../.gitbook/assets/proxy-board.jpg" alt=""><figcaption></figcaption></figure>
 
