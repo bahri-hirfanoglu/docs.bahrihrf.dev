@@ -6,32 +6,8 @@ Elimizde bulunan bir nesne ile etkileşime girerken daha fazla kontrole sahip ol
 
 C#'da bir proxy modeli örneği yapalım.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>class Config {
-</strong>    private string _appName;
-    
-    public string AppName {
-        get {
-        return _appName;
-        }
-        set {
-        _appName = value;
-        }
-    }
-}
-
-<strong>Config conf = new Config();
-</strong>Console.WriteLine(conf.AppName);
-
-conf.AppName = "Proxy Pattern";
-Console.WriteLine(conf.AppName);</code></pre>
-
-Yukarıda bulunan yapımızda <mark style="color:orange;">**Config**</mark> adında bir sınıf oluşturduk ve içerisine private olarak <mark style="color:green;">**\_appName**</mark> değişkenini tanımladık. Daha sonra bu <mark style="color:green;">**\_appName**</mark> değişkenimize dışarıdan erişim sağlayabilmek adına public şekilde bir **AppName** property'si oluşturduk. Bu property proxy modelindeki proxy nesnesini temsil etmektedir.&#x20;
-
-Sınıfımızın en alt kısmında bir config sınıfımızın bir nesnesini oluşturarak **AppName** property'mizi çağırdık. Bu property bize <mark style="color:green;">**\_appName**</mark> değişkenimize erişim sağlamak için bir aracı görevi görmektedir. En alt kısımda ise yine **AppName** property'sini kullanarak değişkenimizin değerini güncelledik. Bu kısma kadar normal bir değişkene yaptığımız işlemlerden farklı bir şey yapmadık. Fakat biz <mark style="color:green;">**\_appName**</mark> değişkenimize erişilmeye çalışırken veyahut değer güncellenmeye çalışırken farklı bir aksiyon almak isteseydik. İşte burada proxy modelinin mantığını kullanacağız.
-
-Örneğin <mark style="color:green;">**\_appName**</mark> değişkenimize bir karakter sınırı koyalım. Belli bir karakter sınırı altında veri girişi olduğunda hata döndürelim.&#x20;
-
-<pre class="language-csharp"><code class="lang-csharp">class Config {
+```csharp
+class Config {
     private string _appName;
     
     public string AppName {
@@ -39,19 +15,47 @@ Sınıfımızın en alt kısmında bir config sınıfımızın bir nesnesini olu
         return _appName;
         }
         set {
-        if(value.Length &#x3C; 5) throw new Exception("minimum number of characters is 5");
         _appName = value;
         }
     }
 }
 
-<strong>Config conf = new Config();
-</strong>Console.WriteLine(conf.AppName);
+Config conf = new Config();
+Console.WriteLine(conf.AppName);
+
+conf.AppName = "Proxy Pattern";
+Console.WriteLine(conf.AppName);
+```
+
+Yukarıda bulunan yapımızda <mark style="color:orange;">**Config**</mark> adında bir sınıf oluşturduk ve içerisine private olarak <mark style="color:green;">**\_appName**</mark> değişkenini tanımladık. Daha sonra bu <mark style="color:green;">**\_appName**</mark> değişkenimize dışarıdan erişim sağlayabilmek adına public şekilde bir **AppName** property'si oluşturduk. Bu property proxy modelindeki proxy nesnesini temsil etmektedir.&#x20;
+
+Sınıfımızın en alt kısmında bir config sınıfımızın bir nesnesini oluşturarak **AppName** property'mizi çağırdık. Bu property bize <mark style="color:green;">**\_appName**</mark> değişkenimize erişim sağlamak için bir aracı görevi görmektedir. En alt kısımda ise yine **AppName** property'sini kullanarak değişkenimizin değerini güncelledik. Bu kısma kadar normal bir değişkene yaptığımız işlemlerden farklı bir şey yapmadık. Fakat biz <mark style="color:green;">**\_appName**</mark> değişkenimize erişilmeye çalışırken veyahut değer güncellenmeye çalışırken farklı bir aksiyon almak isteseydik. İşte burada proxy modelinin mantığını kullanacağız.
+
+Örneğin <mark style="color:green;">**\_appName**</mark> değişkenimize bir karakter sınırı koyalım. Belli bir karakter sınırı altında veri girişi olduğunda hata döndürelim.&#x20;
+
+```csharp
+class Config {
+    private string _appName;
+    
+    public string AppName {
+        get {
+        return _appName;
+        }
+        set {
+        if(value.Length < 5) throw new Exception("minimum number of characters is 5");
+        _appName = value;
+        }
+    }
+}
+
+Config conf = new Config();
+Console.WriteLine(conf.AppName);
 
 conf.AppName = "Proxy Pattern";
 Console.WriteLine(conf.AppName);
 
-conf.AppName = "Prox";</code></pre>
+conf.AppName = "Prox";
+```
 
 Kodumuzu yukarıdaki gibi güncellediğimizde artık <mark style="color:green;">**\_appName**</mark> değişkenimizin alabileceği minimum karakter sınırını 5 olarak belirlemiş olduk. **set** işlemi gerçekleşmeden hemen önce gelen değerimizin karakter sayısını kontrol ederek eğer 5'den küçük ise <mark style="color:red;">**throw**</mark> ile hata mesajımızı gönderdik. Derleyicimiz **conf.AppName = "Prox"** kodumuzu çalıştırmayı denediğinde throw ile gönderdiğimiz hata ile karşılaşmış olacağız. Bu şekilde değişkenimizin getter ve setter işlemlerinden önce çeşitli aksiyonlar alabilir veya get ve set işlemlerinden herhangi birini kullanmak istemiyorsa bu bloğu kaldırarak değişkenimize sınırlama getirebiliriz.
 
