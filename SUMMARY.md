@@ -13,6 +13,10 @@
 * [promise](javascript/promise.md)
 * [async/await](javascript/async-await.md)
 
+## GoLang
+
+* [struct](golang/struct.md)
+
 ## Design Patterns
 
 * [singleton pattern](design-patterns/singleton-pattern.md)
