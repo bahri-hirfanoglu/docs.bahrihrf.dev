@@ -19,7 +19,7 @@ type Product struct {
 }
 ```
 
-Yukarıda Product adında bir struct oluşturup içerisine özellikler tanımladık. Şimdi bu Product yapımızın bir örneğini oluşturalım.&#x20;
+Product yapımızın bir örneğini oluşturalım.&#x20;
 
 ```go
 package main
@@ -47,11 +47,11 @@ func main() {
 
 ### Struct'larda Kurucu Metot Var Mı?
 
-Burada { } parantezlerimizin arasına struct içerisinde bulunan özelliklerimizin başlangıç değerlerini atayabiliriz. Bu OOP'de sınıflarda bulunan constructor yani kurucu metot olarak düşünülebilir.
+Yukarıda { } parantezlerimizin arasına struct içerisinde bulunan özelliklerimizin başlangıç değerlerini atayabiliriz. Bu OOP'de sınıflarda bulunan constructor yani kurucu metot olarak düşünülebilir.
 
 (Birebir kurucu metot ile aynı işlevi görmemektedir. OOP'de kurucu metotlarda almak istediğimiz parametreleri biz belirtebiliyoruz veya birden fazla kurucu metot oluşturabiliyoruz. Sadece kullanım benzerliği bulunmaktadır.)&#x20;
 
-main fonksiyonumuzun içerisini aşağıdaki gibi güncellediğimizde **Id** özelliğimizin başlangıç değerini atamış olduk.
+main fonksiyonumuzun içerisini aşağıdaki gibi güncellediğimizde **Id** özelliğimizin başlangıç değerini atamış oluruz.
 
 ```go
 func main() {
@@ -63,7 +63,7 @@ func main() {
 
 ### Struct'larda Erişim Denetleyicileri Var Mı?
 
-Diğer değişkenlere atama yapmama nedenimiz OOP'de aşına olduğumuz access modifiers yapısında bulunan private & public özelliklerinin go'da oluşturduğumuz fonksiyon, struct veya struct içerisinde bulunan özelliklerin ilk harflerine göre otomatik gerçekleşiyor olmasıdır. Yani eğer bir paket içerisine oluşturduğumuz herhangi bir yapıya farklı bir paket içerisinden erişilmesini istiyorsak baş harfini büyük yapmamız yeterli olacaktır. Eğer erişim olmasını istemiyorsak baş harfi küçük olmalıdır. Yaptığımız örnekte Product yapımız içerisinde sadece Id özelliğimizin baş harfini büyük yaptığımız için main paketimiz içerisinden sadece Id erişim sağlayabiliyoruz.&#x20;
+Id dışındaki değişkenlere atama yapmama nedenimiz OOP'de aşına olduğumuz access modifiers yapısında bulunan private & public özelliklerinin go'da oluşturduğumuz fonksiyon, struct veya struct içerisinde bulunan özelliklerin ilk harflerine göre otomatik gerçekleşiyor olmasıdır. Yani eğer bir paket içerisine oluşturduğumuz herhangi bir yapıya farklı bir paket içerisinden erişilmesini istiyorsak baş harfini büyük yapmamız yeterli olacaktır. Eğer erişim olmasını istemiyorsak baş harfi küçük olmalıdır. Yaptığımız örnekte Product yapımız içerisinde sadece Id özelliğimizin baş harfini büyük yaptığımız için main paketimiz içerisinden sadece Id erişim sağlayabiliyoruz.&#x20;
 
 ### Struct **Composition İşlemi**
 
@@ -115,8 +115,6 @@ Slug:
 SkuNo: 
 */
 ```
-
-Bu şekilde struct yapımıza ait fonksiyonlar oluşturabilir ve kullanabiliriz.&#x20;
 
 ### Struct Getter Setter İşlemleri
 
