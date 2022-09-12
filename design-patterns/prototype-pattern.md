@@ -23,15 +23,14 @@ type prototype interface {
 
 Şimdi monster yapımızı oluşturalım.&#x20;
 
-<pre class="language-go"><code class="lang-go">//Parent
+```go
 type Monster struct {
 	name   string
 	detail prototype
 }
 
-//Parent > Child
-<strong>type MonsterDetail struct {
-</strong>	key     string
+type MonsterDetail struct {
+	key     string
 	blood   int
 	damage  int
 	guard   int
@@ -41,12 +40,14 @@ type Monster struct {
 	models  []prototype
 }
 
-//Parent > Child > Childs
 type Model struct {
 	name   string
 	path   string
 	script string
-}</code></pre>
+}
+```
+
+
 
 Daha sonra prototype arayüzü içerisinde bulunan zorunluklarımızı yapılarımıza tanımayalım. Bu tanımlama işlemlerini en alttan en üste olacak şekilde yapacağız.&#x20;
 
