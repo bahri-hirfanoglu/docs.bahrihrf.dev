@@ -66,11 +66,11 @@ function create(...args) {
 
 ```
 
-Tüm servislerimiz içerisine bir create fonksiyonu tanımadık ve gelen argümanlarımıza göre db.create işlemlerini çalıştırdık. db.create işlemine verilerimiz gönderirken çeşitli formatlama işlemlerinden geçirdik. Kodları incelediğimizde blogService ve productService içerisinde slugify paketi import edilmiş. blogService içerisinde ilk karakteri büyütmek için iki ayrı argümana capitalize işlemi yapılmış. productService ve cartService içerisinde ise numberFormat fonksiyonu oluşturularak price ve totalAmount değerleri formatlanmış.&#x20;
+Tüm servislerimiz içerisine bir create fonksiyonu tanımladık ve gelen argümanlarımıza göre db.create işlemlerini çalıştırdık. db.create işlemine verilerimizi gönderirken çeşitli formatlama işlemlerinden geçirdik. Kodları incelediğimizde blogService ve productService içerisinde slugify paketi import edilmiş. blogService içerisinde ilk karakteri büyütmek için iki ayrı argümana capitalize işlemi yapılmış. productService ve cartService içerisinde ise numberFormat fonksiyonu oluşturularak price ve totalAmount değerleri formatlanmış.&#x20;
 
 Görüldüğü üzere aynı işlemleri farklı servislerde kullandık ve her servisin kendi özelinde bunları tanımlamak zorunda kaldık. Bu durumdan kurtulmak kod tekrarını önlemek ve sürdürülebilir bir code base oluşturmak için tekrar eden işlemlerimizi bir modül altında toplayalım.
 
-Tüm formatlama vb işlemlerimizi helper.js adında bir dosya oluşturup içerisine yazıyoruz. export anahtar kelimesi ile fonksiyonlarımızı dışa aktarmış oluyoruz. Böylece helper modülü import edilerek bu fonksiyonlar kullanılabilir olacaktır.
+Tüm formatlama vb işlemlerimizi helper.js adında bir dosya oluşturup içerisine yazıyoruz. export anahtar kelimesi ile fonksiyonlarımızı dışa aktarmış aktarıyoruz. Böylece helper modülü import edilerek bu fonksiyonlar kullanılabilir olacaktır.
 
 ```javascript
 import slugify from "slugify";
@@ -135,4 +135,4 @@ function create(...args) {
 
 ```
 
-Servislerimiz içerisinde tekrar eden kodları ortadan kaldırmış olduk. Böylece daha okunaklı kod yapımız ile güncellenebilirlik durumunu da arttırmış olduk.
+Görüldüğü üzere servislerimiz içerisinde tekrar eden kodları ortadan kaldırmış olduk. Böylece daha okunaklı kod yapımız ile güncellenebilirlik ve sürdürülebilirlik durumlarını arttırmış olduk.&#x20;
