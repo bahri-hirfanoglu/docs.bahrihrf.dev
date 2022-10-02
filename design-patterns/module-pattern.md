@@ -8,16 +8,18 @@ Bir örnek ile module pattern tam olarak anlamaya çalışalım.
 
 3 adet servisimiz olduğunu düşünelim ve bu servisler içerisinde çeşitli aksiyonlar alıyoruz. Şimdi bu aksiyonları basit bir şekilde simüle edelim.&#x20;
 
-<pre class="language-javascript"><code class="lang-javascript">//blogService.js
+```javascript
+//blogService.js
 import slugify from "slugify";
 
-<strong>function create(...args) {
-</strong>  db.create({
+function create(...args) {
+  db.create({
     author: args.author.charAt(0).toUpperCase() + args.author.slice(1),
     title: args.title.charAt(0).toUpperCase() + args.title.slice(1),
     slug: slugify(args.slug, { lower: true }),
   });
-}</code></pre>
+}
+```
 
 ```javascript
 //productService.js
