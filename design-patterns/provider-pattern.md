@@ -17,12 +17,13 @@ public abstract class LoginProviderBase
 
 Daha sonra login metodlarımızı bu soyut class üzerinden üretelim.&#x20;
 
-<pre class="language-csharp"><code class="lang-csharp">public class LoginWithFacebook : LoginProviderBase
+```csharp
+public class LoginWithFacebook : LoginProviderBase
 {
-<strong>    public override void Login(UserData userdata)
-</strong>    {
-<strong>    throw new NotImplementedException();
-</strong>    }
+    public override void Login(UserData userdata)
+    {
+    throw new NotImplementedException();
+    }
 }
 
 public class LoginWithGoogle : LoginProviderBase
@@ -30,8 +31,9 @@ public class LoginWithGoogle : LoginProviderBase
     public override void Login(UserData userdata)
     {
     throw new NotImplementedException();
-<strong>    }
-</strong>}</code></pre>
+    }
+}
+```
 
 Bu şekilde ileride olacak güncellemeler ile yeni login metodlarını kolayca tanımlayabiliriz. Şimdi bu login metodlarından birini kullanalım.&#x20;
 
