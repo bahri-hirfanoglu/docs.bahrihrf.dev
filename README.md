@@ -19,7 +19,7 @@
 * [promise](javascript/promise.md) ✔️
 * [async/await](javascript/async-await.md) ✔️
 
-### GoLang
+### Golang
 
 * [struct](golang/struct.md) ✔️
 
