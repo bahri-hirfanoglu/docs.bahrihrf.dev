@@ -34,7 +34,7 @@ if let yapısı eğer name değişkeni **nil** değilse onu **newname** adlı bi
 Swift içerisinde if dışında guard adında bir değer kontrol yapısı daha bulunmaktadır. Aslında değer kontrolden ziyade şart kontrol diyebiliriz. Guard if'in aksine içerisine yazacağımız şart gerçekleşmezse alacağımız aksiyonları belirlediğimiz bir yapıdır. Yukarıda bulunan örneğinin aynısı **guard let** yapısı ile aşağıda bulunmaktadır.&#x20;
 
 ```swift
-func clickEvebt() {
+func clickEvent() {
     let name : String? = textNameField.text
     guard let newname = name else {
         print("name not nullable")
