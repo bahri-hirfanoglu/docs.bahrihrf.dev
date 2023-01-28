@@ -1,6 +1,6 @@
-# nedir
+# Elasticsearch Nedir
 
-## Elasticsearch Nedir?
+
 
 Elasticsearch, Apache Lucene tabanlı bir tam metin arama ve analiz motorudur. Elasticsearch, birden çok kaynaktan gelen veriler üzerinde analiz işlemlerini gerçekleştirmeyi ve depolanan veriler üzerinde Fuzzy Search (bulanık arama) gibi yapılandırılmamış sorgular çalıştırmayı kolaylaştırır.
 
