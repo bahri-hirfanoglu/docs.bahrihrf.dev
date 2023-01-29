@@ -1,6 +1,6 @@
-# Middleware
+# middleware
 
-Middleware (ara katman) sistem ile uygulama arasında bulunana katmandır diyebiliriz. Bu katmanı anlamak için öncelikle bir örnek oluşturalım.
+Middleware (ara katman) sistem ile uygulama arasında bulunan katmandır diyebiliriz. Bu katmanı anlamak için öncelikle bir örnek oluşturalım.
 
 Örneğimiz için öncelikle express kütüphanesini projemize ekliyoruz ve daha sonra aşağıda bulunan kodları yazarak http sunucumuzu ayağa kaldırıyoruz.
 
