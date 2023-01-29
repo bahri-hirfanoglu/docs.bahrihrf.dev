@@ -4,7 +4,7 @@ Bir Node.js projesi doğası gereği tek bir iş parçacığı üzerinde çalı�
 
 ### Nedir?
 
-Cluster modülü aynı anda çalışan ve ortak bir bağlantı noktasını kullanan alt işlemler oluşturmamıza olanak sağlar. Yani her iş parçacığımıza özel bir server ayağa kaldırır ve bu server ana process'e bağımlı olur.
+Cluster modülü aynı anda çalışan ve ortak bir bağlantı noktasını kullanan alt işlemler oluşturmamıza olanak sağlar.
 
 ### Avantajları
 
