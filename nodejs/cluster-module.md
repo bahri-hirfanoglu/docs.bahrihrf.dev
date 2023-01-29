@@ -6,6 +6,8 @@ Bir Node.js projesi doğası gereği tek bir iş parçacığı üzerinde çalı�
 
 Cluster modülü aynı anda çalışan ve ortak bir bağlantı noktasını kullanan alt işlemler oluşturmamıza olanak sağlar.
 
+Şimdi bir http sunucumuz olduğunu göz önünde bulundurarak cluster modülünün avantajlarını ve çalışma mantığını inceleyelim.&#x20;
+
 ### Avantajları
 
 Cluster module kullanarak sunucumuzun cevap vereceği istek sınır sayısını arttırmış oluruz. Böylece bir iş parçacığında çalışan sunucumuz daha fazla istek alamayacak durumu geldiğinde yeni istekler diğer iş parçacıklarına dağıtılacaktır.&#x20;
