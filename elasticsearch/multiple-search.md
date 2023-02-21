@@ -6,7 +6,7 @@ Elasticsearch ile tek query'de birden fazla index üzerinde search etmek için m
 
 ### Products (index)
 
-_Bu query'de is\_active alanı **1** olan ve **name** alanı <mark style="color:green;">**yeni**</mark> keyword'ü başlayan ürünleri listeleyecektir._
+_Bu query'de is\_active alanı **1** olan ve **name** alanı <mark style="color:green;">**yeni**</mark> keyword'ü ile başlayan ürünleri listeleyecektir._
 
 ```json
 {
@@ -111,7 +111,7 @@ _Bu query'de is\_active alanı **1** olan ve **name, slug, type** alanları <mar
 
 Yukarıda görüldüğü gibi her query'nin bir üst satırına hangi index'de çalıştırmak istiyorsak belirttik. Bu şekilde multiple search işlemini gerçekleştirebiliriz.&#x20;
 
-Şimdi testlerimizi yapalım. **http://elastic-host:elastic:port/\_msearch** adresine post işlemini gerçekleştirip body içerisinde yukarıda bulunan query'mizi yazıyoruz. Buradaki püf nokta header bölümünde **Content-Type:  application/x-ndjson** olarak tanımlanmalıdır. Ayrıca body içerisinde bu datayı gönderirken her satırdan sonra yeni bir satır (\n) eklenmelidir (son satır dahil). Bunun sebebi farklı indexlerde arama işlemleri yapılacağından ayrıştırmayı kolaylaştırmaktır. Yukarıda hazırladığımız query postman üzerinden istek attığımızda sorunsuz çalışacaktır.&#x20;
+Şimdi testlerimizi yapalım. **http://elastic-host:elastic:port/\_msearch** adresine post işlemini gerçekleştirip body içerisinde yukarıda bulunan query'mizi yazıyoruz. Buradaki püf nokta header bölümünde **Content-Type:  application/x-ndjson** olarak tanılamaktır. Ayrıca body içerisinde bu datayı gönderirken her satırdan sonra yeni bir satır (\n) eklenmelidir (son satır dahil). Bunun sebebi farklı indexlerde arama işlemleri yapılacağından ayrıştırmayı kolaylaştırmaktır. Yukarıda hazırladığımız query postman üzerinden istek attığımızda sorunsuz çalışacaktır.&#x20;
 
 ### Response
 
@@ -248,11 +248,11 @@ Aşağıda görüldüğü gibi 3 farklı index için kendi dökümanlarının ya
 }
 ```
 
-<figure><img src="../.gitbook/assets/response_schema (1).png" alt=""><figcaption><p>response schema</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/response_schema (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Sonuç
 
-multiple search yapısı gereği biraz karışık olduğu için anlatım veya verilen query örnekleride karmaşık gelmiş olabilir. Bu yapıya ne zaman ihtiyacımız olur derseniz aşağıdaki görsele göz atabilirsiniz.&#x20;
+multiple search yapısı gereği biraz karışık olduğu için anlatım veya verilen query örnekleride karmaşık gelmiş olabilir. İşin özü birden fazla index arama işlemini aynı anda yapmak ve tek bir response içerisinde tüm indexlerin arama sonucunu elde etmek istiyorsak bu msearch kullanılmalıdır. Bu yapını kullanımına ait bir örneğin görselini aşağıya bırakıyorum göz atabilirsiniz.&#x20;
 
 <div>
 
