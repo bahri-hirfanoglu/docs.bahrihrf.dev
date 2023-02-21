@@ -111,7 +111,7 @@ _Bu query'de is\_active alanı **1** olan ve **name, slug, type** alanları <mar
 
 Yukarıda görüldüğü gibi her query'nin bir üst satırına hangi index'de çalıştırmak istiyorsak belirttik. Bu şekilde multiple search işlemini gerçekleştirebiliriz.&#x20;
 
-Şimdi testlerimizi yapalım. **http://elastic-host:elastic:port/\_msearch** adresine post işlemini gerçekleştirip body içerisinde yukarıda bulunan query'mizi yazıyoruz. Buradaki püf nokta header bölümünde **Content-Type:  application/x-ndjson** olarak tanılamaktır. Ayrıca body içerisinde bu datayı gönderirken her satırdan sonra yeni bir satır (\n) eklenmelidir (son satır dahil). Bunun sebebi farklı indexlerde arama işlemleri yapılacağından ayrıştırmayı kolaylaştırmaktır. Yukarıda hazırladığımız query postman üzerinden istek attığımızda sorunsuz çalışacaktır.&#x20;
+Şimdi testlerimizi yapalım. **`http://elastichost:port/_msearch`** adresine post işlemini gerçekleştirip body içerisinde yukarıda bulunan query'mizi yazıyoruz. Buradaki püf nokta header bölümünde **Content-Type:  application/x-ndjson** olarak tanılamaktır. Ayrıca body içerisinde bu datayı gönderirken her satırdan sonra yeni bir satır (\n) eklenmelidir (son satır dahil). Bunun sebebi farklı indexlerde arama işlemleri yapılacağından ayrıştırmayı kolaylaştırmaktır. Yukarıda hazırladığımız query postman üzerinden istek attığımızda sorunsuz çalışacaktır.&#x20;
 
 ### Response
 
