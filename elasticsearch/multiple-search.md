@@ -8,8 +8,9 @@ Elasticsearch ile tek query'de birden fazla index üzerinde search etmek için m
 
 _Bu query'de is\_active alanı **1** olan ve **name** alanı <mark style="color:green;">**yeni**</mark> keyword'ü başlayan ürünleri listeleyecektir._
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>    "query": {
+```json
+{
+    "query": {
         "bool": {
             "must": [
                 {
@@ -29,16 +30,17 @@ _Bu query'de is\_active alanı **1** olan ve **name** alanı <mark style="color:
         }
     }
 }
-</code></pre>
+```
 
-<figure><img src="../.gitbook/assets/product_query_schema.png" alt=""><figcaption><p>product query schema</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/product_query_schema.png" alt=""><figcaption></figcaption></figure>
 
 ### Categories (index)
 
 _Bu query'de is\_active alanı **1** olan ve **title, description** alanları <mark style="color:green;">**yeni**</mark> keyword'ü ile başlayan kategorileri listeleyecektir._&#x20;
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>    "query": {
+```json
+{
+    "query": {
         "bool": {
             "must": [
                 {
@@ -59,16 +61,17 @@ _Bu query'de is\_active alanı **1** olan ve **title, description** alanları <m
         }
     }
 }
-</code></pre>
+```
 
-<figure><img src="../.gitbook/assets/category_query_schema.png" alt=""><figcaption><p>category query schema</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/category_query_schema.png" alt=""><figcaption></figcaption></figure>
 
 ### Brands (index)
 
 _Bu query'de is\_active alanı **1** olan ve **name, slug, type** alanları <mark style="color:green;">**yeni**</mark> keyword'ü ile başlayan markaları listeleyecektir._&#x20;
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>    "query": {
+```json
+{
+    "query": {
         "bool": {
             "must": [
                 {
@@ -90,7 +93,7 @@ _Bu query'de is\_active alanı **1** olan ve **name, slug, type** alanları <mar
         }
     }
 }
-</code></pre>
+```
 
 <figure><img src="../.gitbook/assets/brand_query_schema.png" alt=""><figcaption></figcaption></figure>
 
