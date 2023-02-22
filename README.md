@@ -26,6 +26,7 @@
 ### Elasticsearch
 
 * [elasticsearch-nedir](elasticsearch/elasticsearch-nedir.md) ✔️
+* [multiple-search](elasticsearch/multiple-search.md) ✔️
 
 ### Design Patterns
 

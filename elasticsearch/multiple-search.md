@@ -252,7 +252,7 @@ Aşağıda görüldüğü gibi 3 farklı index için kendi dökümanlarının ya
 
 ### Sonuç
 
-multiple search yapısı gereği biraz karışık olduğu için anlatım veya verilen query örnekleri de karmaşık gelmiş olabilir. İşin özü birden fazla index'de arama işlemini aynı anda yapmak ve tek bir response içerisinde tüm indexlerin arama sonucunu elde etmek istiyorsak msearch yapısı kullanılmalıdır. Bu yapını kullanımına ait bir örneğin görselini aşağıya bırakıyorum göz atabilirsiniz.&#x20;
+multiple search yapısı gereği biraz karışık olduğu için anlatım veya verilen query örnekleri de karmaşık gelmiş olabilir. İşin özü birden fazla index'de arama işlemini aynı anda yapmak ve tek bir response içerisinde tüm indexlerin arama sonucunu elde etmek istiyorsak msearch yapısı kullanılmalıdır. Bu yapının kullanımına ait bir örneğin görselini aşağıya bırakıyorum göz atabilirsiniz.&#x20;
 
 <div>
 
