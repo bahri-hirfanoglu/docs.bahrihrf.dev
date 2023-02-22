@@ -19,16 +19,16 @@
 * [promise](javascript/promise.md) ✔️
 * [async/await](javascript/async-await.md) ✔️
 
-### Golang
+### golang
 
 * [struct](golang/struct.md) ✔️
 
-### Elasticsearch
+### elasticsearch
 
 * [elasticsearch-nedir](elasticsearch/elasticsearch-nedir.md) ✔️
 * [multiple-search](elasticsearch/multiple-search.md) ✔️
 
-### Design Patterns
+### design patterns
 
 * [singleton pattern](design-patterns/singleton-pattern.md) ✔️
 * [proxy pattern](design-patterns/proxy-pattern.md) ✔️
@@ -55,7 +55,7 @@
 * [enum](swift/enum.md) ✔️
 * [subscript](swift/subscript.md) ✔️
 
-### References
+### references
 
 * [nodejs](references/nodejs.md)
 * [javascript](references/javascript.md)
