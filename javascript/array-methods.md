@@ -265,7 +265,7 @@ console.log(array1.slice(1, 3)); //[ 2, 3 ]
 
 ### some
 
-Dizi içerisinde bulunan elemanların belirtilen testi başarıyla geçip geçmediğinin kontrol eder. (Elemanlardan herhangi birinin testi geçmesi yeterlidir.)
+Dizi içerisinde bulunan elemanların belirtilen testi başarıyla geçip geçmediğini kontrol eder. (Elemanlardan herhangi birinin testi geçmesi yeterlidir.)
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>console.log(array1.some((x) => x == 2));
 </strong></code></pre>
