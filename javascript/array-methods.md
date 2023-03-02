@@ -10,15 +10,12 @@ let array2 = [5, 5, 6, 4];
 Dizileri elemanlarını birleştirerek tek bir dizi içerisinde döndürür.
 
 ```javascript
-const concatArray = array1.concat(array2);
-console.log("concat", concatArray);
+array1.concat(array2);
 /* Output: 
-
-concat [
+[
   1, 2, 3, 4, 5,
   5, 5, 6, 4
 ]
-
 /*
 ```
 
@@ -44,11 +41,9 @@ console.log(`${key} - ${value}`);
 Dizi içerisinde bulunan elemanların belirtilen testi başarıyla geçip geçmediğinin kontrol eder. (Elemanlardan herhangi birinin testi geçmesi yeterlidir.)
 
 ```javascript
-const isOK = array1.every((i) => {
+console.log(array1.every((i) => {
     return i > 3;
-})
-
-console.log(isOK); //false
+})); //false
 ```
 
 ### fill
@@ -267,8 +262,9 @@ console.log(array1.slice(1, 3)); //[ 2, 3 ]
 
 Dizi içerisinde bulunan elemanların belirtilen testi başarıyla geçip geçmediğini kontrol eder. (Elemanlardan herhangi birinin testi geçmesi yeterlidir.)
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>console.log(array1.some((x) => x == 2));
-</strong></code></pre>
+```javascript
+console.log(array1.some((x) => x == 2));
+```
 
 ### sort
 
