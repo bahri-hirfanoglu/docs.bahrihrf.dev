@@ -7,7 +7,7 @@ let array2 = [5, 5, 6, 4];
 
 ### concat
 
-Dizileri elemanlarını birleştirerek tek bir dizi olarak döndürür.
+Dizileri elemanlarını birleştirerek tek bir dizi içerisinde döndürür.
 
 ```javascript
 const concatArray = array1.concat(array2);
@@ -55,13 +55,14 @@ console.log(isOK); //false
 
 Dizi içerisinde belirli bir veriyi veya tüm verileri istenilen değer ile değiştirir. Bu işlemden sonra herhangi bir atama yapmaya gerek yoktur. İşleme tabi tutulan array'ın değerleri güncellenir.
 
-<pre class="language-javascript"><code class="lang-javascript">// Tüm elemanları 0 olarak günceller
+```javascript
+// Tüm elemanları 0 olarak günceller
 console.log(array1.fill(0)); //Output [ 0, 0, 0, 0, 0 ]
 
 // 1. ile 3. index numarası arasında olan elemanları 0 olarak günceller.
-<strong>// fill(value, start_index, end_index)
-</strong>console.log(array2.fill(0, 1, 3)); //Output [ 5, 0, 0, 4 ]
-</code></pre>
+// fill(value, start_index, end_index)
+console.log(array2.fill(0, 1, 3)); //Output [ 5, 0, 0, 4 ]
+```
 
 ### filter
 
