@@ -19,6 +19,7 @@
 * [promise](javascript/promise.md) ✔️
 * [async/await](javascript/async-await.md) ✔️
 * [array methods](javascript/array-methods.md) ✔️
+* [static & private](javascript/static-and-private.md) ✔️
 
 ### golang
 
