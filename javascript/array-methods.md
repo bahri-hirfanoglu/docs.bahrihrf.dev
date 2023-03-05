@@ -205,7 +205,7 @@ console.log(Array.of('1', false, 'ABC', 'FS'))
 
 ### reduce
 
-Sırayla dizinin tüm elemanlarını kullanarak yapılan işlemi bir sonraki dizi elemanıyla işlem yapmak için aktarılır. _(Aşağıda bulunan örnekte 0 olarak belirtilen kısımn result değerinin başlangıç değeridir. Eğer bu değer belirtilmezse result değerinin başlangıç değeri dizinin 0. indexinde elemanı olacaktır. Bundan dolayı value'nin başlangıç değer dizinin 1. indexinde bulunan eleman olacaktır.)_
+Sırayla dizinin tüm elemanlarını kullanarak yapılan işlemi bir sonraki dizi elemanıyla işlem yapmak için aktarılır. _(Aşağıda bulunan örnekte 0 olarak belirtilen kısımn result değerinin başlangıç değeridir. Eğer bu değer belirtilmezse result değerinin başlangıç değeri dizinin 0. indexin de bulunan eleman olacaktır. Bundan dolayı value'nin başlangıç değer dizinin 1. indexin de bulunan eleman olacaktır.)_
 
 ```javascript
 array1.reduce((result, value) => {
