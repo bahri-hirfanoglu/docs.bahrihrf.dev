@@ -16,7 +16,7 @@ Create (n:Person {id:1, companies: [1,2,3], name: 'Cevdet'})
 
 * **Lables**
 
-Lables oluşturduğumuz nodlara verdiğimiz isimdir. Örnek olarak aşağıdaki sorgu ile oluşturduğumuz bir node’un Label'ı **Person’dur**
+Lables oluşturduğumuz nodlara verdiğimiz isimdir. Örnek aşağıdaki sorgu ile oluşturduğumuz bir node Label'ı **Person’dur**
 
 ```cypher
 Create (n:Person)
@@ -33,7 +33,7 @@ create (a) - [r:PersonCompany {name:a.name+'<->'+b.name}] -> (b)
 return type(r), a,b
 ```
 
-Yukarıda bulunan **Match** aslında SQL’deki select yada **INNER JOIN** olara düşünülebilir. Yukarıda label'ları çağırdık ve birbirlerine ilişkilendireceğimiz properties'leri belirleyerek yeni bir kesişimlerinden yeni bir **nodes** oluşturduk.
+Yukarıda bulunan **Match** aslında SQL’deki select yada **INNER JOIN** olarak düşünülebilir. Yukarıdaki sorguyu açıklayacak olursak. Label'ları çağırdık ve ilişkiyi kuracağımız properties'leri belirterek kesişimlerinden yeni bir **nodes** oluşturduk.
 
 <figure><img src="../.gitbook/assets/cypher_graph_nodes.jpg" alt=""><figcaption></figcaption></figure>
 
