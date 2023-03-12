@@ -57,6 +57,10 @@
 * [enum](swift/enum.md) ✔️
 * [subscript](swift/subscript.md) ✔️
 
+### other
+
+* [neo4j](other/neo4j.md) ✔️
+
 ### references
 
 * [nodejs](references/nodejs.md)
