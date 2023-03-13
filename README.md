@@ -60,6 +60,7 @@
 ### other
 
 * [neo4j](other/neo4j.md) ✔️
+* [cache strategies](other/cache-strategies.md) ✔️
 
 ### references
 
