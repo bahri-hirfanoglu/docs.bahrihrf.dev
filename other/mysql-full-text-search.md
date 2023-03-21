@@ -6,7 +6,7 @@ Mysql ile bir arama işlemi gerçekleştirmek istediğimizde _**Where**_ anahtar
 select * from product_translations where id = 3
 ```
 
-Peki sözel bir ifadenin içinde arama yapmak istersek. O zaman **LIKE** anahtar sözcüğünü kullanmamız gerekir. Aşağıda products tablosunun name kolonu içerisinde "**matlab**" kelimesini içeren kayıtları getirir.&#x20;
+Peki sözel bir ifadenin içinde arama yapmak istersek. O zaman **LIKE** anahtar sözcüğünü kullanmamız gerekir. Aşağıdaki sorgu products tablosunun name kolonu içerisinde "**matlab**" kelimesini içeren kayıtları getirir.&#x20;
 
 ```sql
 select * from product_translations where name like '%matlab%'
@@ -20,9 +20,13 @@ Aşağıdaki görselde **product\_description\_translations** tablosunda **conte
 
 <figure><img src="../.gitbook/assets/full-text-test-1.png" alt=""><figcaption></figcaption></figure>
 
-Görüldüğü üzere bu işlemin tamamlanması **12.2** saniye sürdü. Bu çok uzun bir süre ve veritabanı trafiğine göre dahada artış gösterebilir. Şimdi full text search ile aynı işlemi gerçekleştirelim.
+Görüldüğü üzere bu işlemin tamamlanması **12.2** saniye sürdü. Bu çok uzun bir süre ve veritabanı trafiğine göre dahada artış gösterebilir. Şimdi full text search ile aynı işlemi gerçekleştirelim.&#x20;
 
-**NOT:** Full text search işlemini gerçekleştirmek için tablomuz oluşturulurken full text aramasına dahil olacak kolonları belirtmemiz gerekir veya aşağıdaki sorgu ile tablomuz oluştuktan sonra kolonları full text aramaları için kullanılabilir hale getirebiliriz.
+Aşağıda görüldüğü üzere **AGAINST** anahtar kelimesi ile full text search işlemi gerçekleştirdik ve aynı işlemi **0.6** saniyede tamamladık.&#x20;
+
+<figure><img src="../.gitbook/assets/full-text-test-2.png" alt=""><figcaption></figcaption></figure>
+
+**NOT:** Full text search işlemini gerçekleştirmek için tablomuz oluşturulurken full text aramasına dahil olacak kolonları belirtmemiz gerekir veya tablomuz oluştuktan sonra kolonları full text aramaları için kullanılabilir hale getirebiliriz
 
 ```sql
 CREATE TABLE products (
@@ -37,11 +41,6 @@ ALTER TABLE  table_name
 ADD FULLTEXT(column_name1, column_name2,…)
 ```
 
-Aynı işlemi full text search ile yaptığımızda aşağıdaki sonucu elde ederiz.
-
-<figure><img src="../.gitbook/assets/full-text-test-2.png" alt=""><figcaption></figcaption></figure>
-
-Görüldüğü üzere **AGAINST** anahtar kelimesi ile full text search işlemi gerçekleştirdik ve aynı işlemi **0.6** saniyede tamamladık. \
 **NOT:** Arama yaparken kullanabileceğimiz tüm modların listesi aşağıda bulunmaktadır. Bu modların detaylı bilgisine [https://dev.mysql.com/doc/refman/8.0/en/fulltext-search.html](https://dev.mysql.com/doc/refman/8.0/en/fulltext-search.html) adresinden ulaşabilirsiniz.&#x20;
 
 ```sql
