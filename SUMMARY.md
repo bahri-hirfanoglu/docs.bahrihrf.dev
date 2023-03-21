@@ -54,6 +54,7 @@
 
 * [neo4j](other/neo4j.md)
 * [cache strategies](other/cache-strategies.md)
+* [mysql full text search](other/mysql-full-text-search.md)
 
 ## References
 
