@@ -1,6 +1,6 @@
 # mysql full text search
 
-Mysql ile bir arama işlemi gerçekleştirmek istediğimizde _**Where**_ anahtar kelimesini kullanırız. Aşağıda products tablosunda id alanı, 3'e eşit olan kaydı getiren bir sorgu var. Genelde böyle bir arama işlemi gerçekleştirdiğimizde sonuca hızlı bir şekilde ulaşırız.&#x20;
+MySQL ile bir arama işlemi gerçekleştirmek istediğimizde _**Where**_ anahtar kelimesini kullanırız. Aşağıda products tablosunda id alanı, 3'e eşit olan kaydı getiren bir sorgu var. Genelde böyle bir arama işlemi gerçekleştirdiğimizde sonuca hızlı bir şekilde ulaşırız.&#x20;
 
 ```sql
 select * from product_translations where id = 3
